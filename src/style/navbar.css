@@ -1,0 +1,28 @@
+.navbar{
+    margin-top: 0;
+    padding: 0;
+    height: 20vh;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.searchbar {
+    background-color: white;
+    width: 25%;
+    height: 20%;
+    padding: 0.4rem 1rem;
+    border-radius: 2rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    input {
+      border: none;
+      height: 3vh;
+      width: 100%;
+      &:focus {
+        outline: none;
+      }
+    }
+}

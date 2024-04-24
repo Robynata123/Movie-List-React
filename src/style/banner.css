@@ -1,0 +1,19 @@
+.banner{
+    display: flex;
+    flex-wrap: wrap;
+}
+.bannerLeft {
+    justify-content: center;
+    text-align: center;
+    width: 50%;
+}
+
+.bannerRight {
+    align-items: center;
+    justify-content: center;
+    width: 50%;
+}
+
+.bannerRight img {
+    margin: 5vh 0 0 8vh;
+}

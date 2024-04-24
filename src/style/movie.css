@@ -1,0 +1,22 @@
+.daftar{
+    margin: 10vh;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+}
+
+
+.daftar img{
+    margin: 3vh 3vh 3vh 3vh;
+    max-width: 12vw;
+}
+
+.daftar h1 {
+    margin: 3vh 3vh 3vh 3vh;
+    flex: 1;
+    max-width: 12vw;
+}
+
+.movie-item{
+    height: 50vh ;
+}
