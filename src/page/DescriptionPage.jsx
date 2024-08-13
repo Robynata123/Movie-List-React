@@ -1,7 +1,6 @@
 import React, { useEffect, useState, useMemo } from 'react';
 import { useParams } from 'react-router-dom';
 import useMultiApi from '../utils/useMultiApi';
-// import '../style/deskripsi.css'
 
 const DescriptionPage = () => {
   const { id } = useParams();
@@ -41,28 +40,20 @@ const DescriptionPage = () => {
   }
 
   return (
-    <div className='flex flex-col items-center '>
-  <img
-    src={`https://image.tmdb.org/t/p/w200${content.poster_path}`}
-    alt={content.title}
-    className="mx-auto"
-  />
-  {content.name && 
-    <div className='text-center mt-4'>
-      <h1 className='font-bold'>{content.name}</h1>
-      <h2 className='mt-2'>{content.genre_ids.join(', ')}</h2>
-      <p className='mt-2'>{content.overview}</p>
+    <div className="min-h-screen text-black flex justify-center items-center p-6">
+      <div className="flex flex-col sm:flex-row items-center sm:items-start max-w-4xl">
+        <img
+          src={`https://image.tmdb.org/t/p/w200${content.poster_path}`}
+          alt={content.title || content.name}
+          className="rounded-lg shadow-lg sm:w-48 w-40"
+        />
+        <div className="sm:ml-8 mt-6 sm:mt-0 text-center sm:text-left">
+          <h1 className="text-2xl font-bold">{content.title || content.name}</h1>
+          <h2 className="mt-2 text-sm font-medium text-gray-400">{content.genre_ids.join(', ')}</h2>
+          <p className="mt-4 text-base leading-relaxed text-black max-w-2xl">{content.overview}</p>
+        </div>
+      </div>
     </div>
-  }
-  {content.title && 
-    <div className='text-center mt-4'>
-      <h1 className='font-bold'>{content.title}</h1>
-      <h2 className='mt-2'>{content.genre_ids.join(', ')}</h2>
-      <p className='mt-2'>{content.overview}</p>
-    </div>
-  }
-</div>
-
   );
 };
 
